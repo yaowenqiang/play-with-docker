@@ -16,7 +16,7 @@ A live version is available at: http://play-with-docker.com/
 
 ```bash
 # Clone this repo locally
-git clone https://github.com/play-with-docker/play-with-docker
+git clone https://github.com/yaowenqiang/play-with-docker
 cd play-with-docker
 
 # Verify the Docker daemon is running
@@ -30,7 +30,8 @@ sudo modprobe xt_ipvs
 docker swarm init
 
 # Get the latest franela/dind image
-docker pull franela/dind
+docker pull yaowenqiang/dind
+docker tag  yaowenqiang/dind franela/dind
 
 # Optional (with go1.14): pre-fetch module requirements into vendor
 # so that no network requests are required within the containers.
@@ -74,3 +75,4 @@ If you need to access your services from outside, use the following URL pattern 
 
 No, it needs to run on those ports for DNS resolve to work. Ideas or suggestions about how to improve this
 are welcome
+franela/dind
